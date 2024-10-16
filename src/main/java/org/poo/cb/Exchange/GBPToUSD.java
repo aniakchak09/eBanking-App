@@ -1,0 +1,9 @@
+package org.poo.cb.Exchange;
+
+import org.poo.cb.CentralApp;
+
+public class GBPToUSD implements ExchangeStrategy {
+    public float exchange(float amount) {
+        return amount * CentralApp.getInstance().getExchangeRates().get("GBPUSD");
+    }
+}
